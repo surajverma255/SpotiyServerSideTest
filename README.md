@@ -34,5 +34,6 @@ This framework is designed for teams aiming to achieve automation excellence. Wh
 
 ✨ Star this repository and contribute to revolutionizing API testing! 🎉
 
-![image](https://github.com/user-attachments/assets/d9a826e3-fc75-4b26-9233-1da571ae78b4)
+![image](https://github.com/user-attachments/assets/eebe0a3c-ef54-4bd9-9232-33a8a955c45b)
+
 
