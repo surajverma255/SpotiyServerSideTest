@@ -20,6 +20,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '11'
+          distribution: 'temurin' # Adding the required distribution
 
       - name: Cache Maven Dependencies
         uses: actions/cache@v3
