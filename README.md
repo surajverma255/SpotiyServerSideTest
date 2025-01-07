@@ -33,3 +33,7 @@ Dependencies: Jackson, Maven Surefire Plugin
 This framework is designed for teams aiming to achieve automation excellence. Whether for local testing or CI/CD pipelines, it sets the standard for speed, reliability, and maintainability.
 
 ✨ Star this repository and contribute to revolutionizing API testing! 🎉
+
+![image](https://github.com/user-attachments/assets/eebe0a3c-ef54-4bd9-9232-33a8a955c45b)
+
+
