@@ -102,4 +102,25 @@ public class TrackTests extends BaseTest {
 
         System.out.println("Executed testMyTrack on Thread: " + Thread.currentThread().getId());
     }
+
+
+    @Test(priority = 1)
+    @Story("Search and Verify My Track")
+    @Severity(SeverityLevel.MINOR)
+    @Description("This test verifies the ability to search and retrieve the first track's name.")
+    public void testPlaylistTrack() {
+        String query = "Imagine Dragons";
+
+        Allure.step("Searching for the track: " + query);
+        Response response = spotifyAPIClient.searchTrack(query);
+
+        Allure.step("Validating response status code");
+        Assert.assertEquals(response.getStatusCode(), 200);
+
+        Allure.step("Extracting the first track name from the response");
+        String firstTrackName = response.jsonPath().getString("tracks.items[0].name");
+        Assert.assertNotNull(firstTrackName, "First track name is null");
+
+        System.out.println("Executed testMyTrack on Thread: " + Thread.currentThread().getId());
+    }
 }
