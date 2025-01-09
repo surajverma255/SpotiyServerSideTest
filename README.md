@@ -42,6 +42,10 @@ This framework is designed for teams aiming to achieve automation excellence. Wh
 
 ![image](https://github.com/user-attachments/assets/f6295766-b626-43ae-81a2-c3a60451717a)
 
+![image](https://github.com/user-attachments/assets/1ff5bced-8e64-4961-bc01-526783f9ead7)
+
+![image](https://github.com/user-attachments/assets/7f8625f4-7968-47d3-9942-81567857d448)
+
 ![image](https://github.com/user-attachments/assets/53298d46-c962-4f44-8bcb-ba2f6c6fc703)
 
 
