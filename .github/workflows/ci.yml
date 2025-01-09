@@ -20,7 +20,7 @@ jobs:
         run: |
           docker run --rm \
           -v ${{ github.workspace }}/allure-results:/app/allure-results \
-          spotify-tests mvn clean test
+          spotify-tests mvn clean test -Dsurefire.suiteXmlFiles=./testng.xml
 
       - name: Download Allure CLI
         run: |
