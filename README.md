@@ -3,12 +3,16 @@ Welcome to the Spotify Server-Side Automation Framework – a robust, scalable, 
 
 🚀 Features
 Comprehensive API Automation: Validates Spotify's API endpoints, including track details, artist albums, and search functionalities.
-TestNG Framework: Supports parallel execution, robust assertions, and data-driven testing.
-CI/CD Integration: Automated build and test workflows powered by GitHub Actions for real-time feedback.
-Dynamic POJO Mapping: Maps API responses to reusable Java objects using Jackson.
-Maven Dependency Management: Streamlined builds and modular test execution.
-Detailed Logging and Reporting: Enables actionable insights and debugging.
-Scalable Parallel Execution: Reduces test execution time by leveraging TestNG parallelism.
+TestNG Framework: Supports parallel execution, robust assertions, and data-driven testing for scalable and efficient test coverage.
+CI/CD Integration: Fully automated build and test workflows powered by GitHub Actions for seamless real-time feedback and continuous deployment.
+Dynamic POJO Mapping: Converts API responses into reusable Java objects using Jackson for maintainability and clarity.
+Maven Dependency Management: Simplifies builds and modular test execution with efficient dependency resolution.
+Detailed Logging and Reporting: Facilitates actionable insights and debugging with comprehensive logs and test results.
+Scalable Parallel Execution: Optimizes test execution time through advanced parallelism provided by TestNG.
+Allure Reporting: Generates visually appealing, detailed, and interactive test reports for deeper insights into test executions.
+Docker Integration: Runs tests in isolated and reproducible Docker containers, ensuring environment consistency and ease of scaling.
+Artifact Management: Automatically generates and uploads test artifacts, such as Allure reports, for seamless collaboration and sharing.
+Cross-Platform Compatibility: Ensures tests run efficiently on various environments (local, CI/CD pipelines, and Docker)..
 
 📂 Project Structure
 src/main/java: Core utilities and reusable components.
