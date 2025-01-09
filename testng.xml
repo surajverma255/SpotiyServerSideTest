@@ -9,6 +9,7 @@
                     <include name="testGetArtistAlbums"/>
                     <include name="testGetTrackDetails"/>
                     <include name="testMyTrack"/>
+                    <include name="testPlaylistTrack"/>
                 </methods>
             </class>
         </classes>

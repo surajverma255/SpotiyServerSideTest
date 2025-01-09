@@ -1,4 +1,4 @@
-name: CI Workflow with Allure
+name: CI Workflow with Docker and Allure
 
 on:
   push:
@@ -13,28 +13,23 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Set Up JDK
-        uses: actions/setup-java@v3
-        with:
-          java-version: '11'
-          distribution: 'temurin'
+      - name: Build Docker Image
+        run: docker build -t spotify-tests .
 
-      - name: Cache Maven Dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
-
-      - name: Run Tests and Generate Allure Results
-        run: mvn clean test
+      - name: Run Tests Inside Docker
+        run: |
+          docker run --rm \
+          -v ${{ github.workspace }}/allure-results:/app/allure-results \
+          spotify-tests mvn clean test
 
       - name: Download Allure CLI
-        run: curl -o allure.tgz -L https://github.com/allure-framework/allure2/releases/download/2.21.0/allure-2.21.0.tgz && tar -xvzf allure.tgz
+        run: |
+          curl -o allure.tgz -L https://github.com/allure-framework/allure2/releases/download/2.21.0/allure-2.21.0.tgz \
+          && tar -xvzf allure.tgz
 
       - name: Generate Allure Report
-        run: ./allure-2.21.0/bin/allure generate allure-results --clean -o allure-report
+        run: |
+          ./allure-2.21.0/bin/allure generate allure-results --clean -o allure-report
 
       - name: Upload Allure Report as Artifact
         uses: actions/upload-artifact@v3

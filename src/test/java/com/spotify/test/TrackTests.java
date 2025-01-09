@@ -30,7 +30,7 @@ public class TrackTests extends BaseTest {
         System.out.println("Executed testSearchTrack on Thread: " + Thread.currentThread().getId());
     }
 
-    @Test
+    @Test(priority = -10)
     @Story("Get Track Details")
     @Severity(SeverityLevel.CRITICAL)
     @Description("This test verifies the details of a track by its unique ID.")
